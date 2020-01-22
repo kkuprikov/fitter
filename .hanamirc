@@ -1,0 +1,3 @@
+project=fitter
+test=rspec
+template=erb

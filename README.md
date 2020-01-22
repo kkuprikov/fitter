@@ -1,22 +1,33 @@
 # Fitter
 
-Inspired by this book: https://www.amazon.com/Convict-Conditioning-Weakness-Using-Survival-Strength/dp/0938045768
+Welcome to your new Hanami project!
 
-Fitter helps you to workout.
+## Setup
 
-There are essential exercises for your body, such as push-ups, pull-ups, squats and leg raises.
-They require minimum to no extra equipment.
+How to run tests:
 
-Each exercise has progression levels, suggested by Paul Wade in his book "Convict Conditioning".
-So you can track your progress in each exercise, using Fitter.
+```
+% bundle exec rake
+```
 
-In general, you start from level 1 in each exercise.
-After your workout, tell Fitter about results you achieved.
-Fitter will remind you about your next workout and its goal.
+How to run the development console:
 
-Whenever you reach the "advanced" number of repetitions on some level, Fitter will promote you to the next level.
-However, some levels are really hard, so Fitter could suggest you to go back if you try to move too fast.
+```
+% bundle exec hanami console
+```
 
-Any time, you can view your progress in each exercise.
+How to run the development server:
 
-For advanced athletes, you could start tracking your progress from any level and setup custom workout period.
+```
+% bundle exec hanami server
+```
+
+How to prepare (create and migrate) DB for `development` and `test` environments:
+
+```
+% bundle exec hanami db prepare
+
+% HANAMI_ENV=test bundle exec hanami db prepare
+```
+
+Explore Hanami [guides](https://guides.hanamirb.org/), [API docs](http://docs.hanamirb.org/1.3.3/), or jump in [chat](http://chat.hanamirb.org) for help. Enjoy! 🌸
