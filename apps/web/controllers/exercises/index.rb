@@ -4,13 +4,19 @@ module Web
       class Index
         include Web::Action
 
-        def initialize(repository: ExerciseRecordRepository.new)
-          @current_user = 
-          @repository = repository
+        USER_ID = 1
+
+        def initialize(records: ExerciseRecordRepository.new, 
+                       users: UserRepository.new, 
+                       types: ExerciseTypeRepository.new)
+          @records = records
+          @types = types
+          @user = users.find(ENV.fetch('USER_ID'){ USER_ID })
         end
 
         def call(params)
-          @repository.all_by_user(@current_user)
+          # puts @data
+          # self.body = JSON.generate(@data.map(&:to_h))
         end
       end
     end

@@ -1,31 +1,9 @@
 require 'bundler/setup'
 require 'hanami/setup'
-require 'hanami/model'
-require_relative '../lib/fitter'
 require_relative '../apps/web/application'
 
 Hanami.configure do
   mount Web::Application, at: '/'
-
-  model do
-    ##
-    # Database adapter
-    #
-    # Available options:
-    #
-    #  * SQL adapter
-    #    adapter :sql, 'sqlite://db/fitter_development.sqlite3'
-    #    adapter :sql, 'postgresql://localhost/fitter_development'
-    #    adapter :sql, 'mysql://localhost/fitter_development'
-    #
-    adapter :sql, ENV.fetch('DATABASE_URL')
-
-    ##
-    # Migrations
-    #
-    migrations 'db/migrations'
-    schema     'db/schema.sql'
-  end
 
   mailer do
     root 'lib/fitter/mailers'

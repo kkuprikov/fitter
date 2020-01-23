@@ -1,4 +1,4 @@
-Hanami::Model.migration do
+ROM::SQL.migration do
   change do
     create_table :steps do
       primary_key :id
@@ -6,6 +6,8 @@ Hanami::Model.migration do
       foreign_key :exercise_type_id
 
       column :name, String, null: false
+      column :description, String
+      column :url, String
       column :index, Integer, null: false
       column :type, String, null: false # time or count
       column :progression, 'json', null: false

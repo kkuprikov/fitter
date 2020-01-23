@@ -1,4 +1,4 @@
-Hanami::Model.migration do
+ROM::SQL.migration do
   change do
     create_table :exercise_records do
       primary_key :id
