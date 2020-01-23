@@ -1,2 +1,2 @@
-class ExerciseRecords < Hanami::Entity
+class ExerciseRecord < Hanami::Entity
 end
