@@ -4,7 +4,7 @@ module Fitter
       class ExerciseTypes < ROM::Relation[:sql]
         schema(:exercise_types, infer: true) do
           associations do
-            has_many   :exercise_records
+            has_many   :steps
             belongs_to :users, as: :user
           end
         end

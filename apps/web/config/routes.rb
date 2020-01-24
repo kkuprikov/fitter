@@ -1,3 +1,7 @@
 root to: 'exercises#index'
 get '/exercises', to: 'exercises#index'
 post '/exercises', to: 'exercises#create'
+get '/exercises/recent', to: 'exercises#recent'
+get '/exercise_types/upgrade_step', to: 'exercise_types#upgrade_step'
+get '/exercise_types/downgrade_step', to: 'exercise_types#downgrade_step'
+get '/steps', to: 'steps#index'

@@ -21,6 +21,10 @@ module Fitter
         root.last
       end
 
+      def by_id(id)
+        root.by_pk(id).one!
+      end
+
       def create(attrs)
         root.changeset(:create, attrs).map(:add_timestamps).commit
       end
